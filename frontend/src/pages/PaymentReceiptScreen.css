@@ -1,0 +1,73 @@
+.receipt-screen {
+  background: var(--off-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.receipt-card {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.receipt-cutout {
+  position: absolute;
+  top: 55px; /* Aligned with the dashed line */
+  width: 24px;
+  height: 24px;
+  background-color: var(--off-white);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.receipt-cutout.left {
+  left: -12px;
+}
+
+.receipt-cutout.right {
+  right: -12px;
+}
+
+/* Base styles extensions for payment form */
+.border-dashed { border-style: dashed; }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.border-primary { border-color: var(--primary-green); }
+.text-primary { color: var(--primary-green); }
+.bg-green-50 { background-color: #F1F8E9; }
+
+.grid { display: grid; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gap-3 { gap: 12px; }
+.gap-2 { gap: 8px; }
+.flex-col { flex-direction: column; }
+.justify-center { justify-content: center; }
+
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.shadow-green-200 {
+  box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid var(--soft-gray);
+  border-radius: 100px;
+  font-family: var(--font-display);
+  font-weight: bold;
+}

@@ -1,0 +1,123 @@
+.completion-screen {
+  background: var(--off-white);
+  min-height: 100vh;
+  position: relative;
+}
+
+.weigh-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.weigh-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--soft-gray);
+  background-color: var(--off-white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--deep-forest);
+  outline: none;
+}
+
+.weigh-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--soft-gray);
+  background-color: var(--off-white);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--deep-forest);
+  outline: none;
+  margin-bottom: 0;
+}
+
+.border-dashed {
+  border-style: dashed;
+  border-width: 2px;
+}
+
+/* Base Styles additions */
+.text-deep-forest { color: var(--deep-forest); }
+.text-gold { color: var(--gold); }
+.bg-deep-forest { background-color: var(--deep-forest); }
+
+/* Swipe Container */
+.swipe-container-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: white;
+  padding: 24px 20px;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
+  z-index: 50;
+}
+
+.swipe-track {
+  width: 100%;
+  height: 64px;
+  background: #E8F5E9;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swipe-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--primary-green);
+  z-index: 1;
+  border-radius: 32px;
+  transition: width 0.1s linear;
+}
+
+.swipe-text {
+  position: relative;
+  z-index: 2;
+  color: var(--deep-forest);
+  font-weight: bold;
+  font-size: 16px;
+  pointer-events: none;
+  animation: pulse-text 2s infinite;
+}
+
+.swipe-thumb {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 28px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: grab;
+  touch-action: none;
+}
+
+.swipe-thumb:active {
+  cursor: grabbing;
+}
+
+.swipe-thumb.success {
+  background: var(--primary-green);
+}
+
+@keyframes pulse-text {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
